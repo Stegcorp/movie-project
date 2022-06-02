@@ -33,10 +33,11 @@ import {MatButtonModule} from '@angular/material/button';
     MatDividerModule,
     MatButtonModule
   ],
-  exports: [
-    GenresComponent,
-    MovieListComponent
-  ],
+    exports: [
+        GenresComponent,
+        MovieListComponent,
+        BottomComponent
+    ],
     providers: [
         MovieService,
     ]

@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {IGenre} from '../../modules/movie/interfaces/genres.interface';
-import {DataService} from '../../modules/movie/services/data.service';
+
 import {MovieService} from '../../modules/movie/services/movie.service';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-main-layout',
@@ -11,7 +12,7 @@ import {MovieService} from '../../modules/movie/services/movie.service';
 export class MainLayoutComponent implements OnInit {
   genres: IGenre[];
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService,) {
 
   }
 
@@ -21,5 +22,6 @@ export class MainLayoutComponent implements OnInit {
     this.movieService.getGenres().subscribe(({genres}) => this.genres = genres);
 
   }
+
 
 }

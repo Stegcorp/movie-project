@@ -10,13 +10,15 @@ import {HttpModule} from './http.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material/slider';
 import {MovieModule} from './modules/movie/movie.module';
+import {PopularComponent} from './components/popular/popular.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    MainLayoutComponent
-  ],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        MainLayoutComponent,
+        PopularComponent
+    ],
     imports: [
         BrowserModule,
         HttpModule,

@@ -1,22 +1,50 @@
+.bottom{
+  width: 100%;
+  background: #0e0000;
+}
 .end{
   display: flex;
   width: 200px;
   justify-content: space-around;
   margin-top: 20px;
 }
-.bottom{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0 10px 0;
-  background: #2f3e4f;
-  height: 70px;
+.text{
+  padding-top: 40px;
+  color: gainsboro;
+  width: 90%;
+  margin-left: 10px;
 }
 a{
   text-decoration: none;
   color: yellow;
 }
+a #button :hover{
+  text-decoration: underline;
+}
 .stepko{
   color: snow;
   margin-right: 10px;
   margin-top: 20px;
+}
+.logo{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+.cont{
+  display: flex;
+  justify-content: space-between;
+}
+.logoplus{
+  display: flex;
+  justify-content: center;
+}
+.logogo{
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+span:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }

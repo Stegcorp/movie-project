@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-bottom',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BottomComponent implements OnInit {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) {
+  }
 
   ngOnInit(): void {
   }
 
+  // tslint:disable-next-line:typedef
+  toTop() {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }
