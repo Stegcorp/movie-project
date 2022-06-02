@@ -1,2 +1,14 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<div class="layout">
+  <app-header class="header"></app-header>
+ <div class="rightPanel">
+  <div class="width"> <router-outlet></router-outlet></div>
+   <div class="genreStyle">
+     <div class="genreMovie">
+       <div class="GF"><b>Genres of films</b></div>
+       <div class="listGenre"><app-genres class="genre" *ngFor="let genre of genres" [genre]="genre"></app-genres></div>
+     </div>
+     <div class="starMovie">
+     </div>
+   </div>
+ </div>
+</div>

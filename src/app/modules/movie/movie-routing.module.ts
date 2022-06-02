@@ -5,7 +5,7 @@ import {MovieListCardComponent} from './components/movie-list-card/movie-list-ca
 
 const routes: Routes = [
   {path: '', component: MovieListComponent, children: [
-      {path: ':id', component: MovieListCardComponent}
+      // {path: ':id', component: MovieListCardComponent}
     ]}
 ];
 

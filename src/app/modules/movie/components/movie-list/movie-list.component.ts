@@ -3,6 +3,9 @@ import {Component, OnInit} from '@angular/core';
 import {IMovie} from '../../interfaces/movie.interface';
 import {MovieService} from '../../services/movie.service';
 import {ActivatedRoute} from '@angular/router';
+import {IObj} from '../../interfaces/obj.interface';
+import {MatButtonModule} from '@angular/material/button';
+import {DataService} from '../../services/data.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -11,13 +14,21 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class MovieListComponent implements OnInit {
 
-  movieList: IMovie;
+  movieList: IObj;
+  results: IMovie[];
+  page: number;
 
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute, private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    this.movieService.getAllObj().subscribe(value => this.movieList = value);
+    this.activatedRoute.queryParams.subscribe(({page, with_genres}) => {
+      this.movieService.getAllObj(page, with_genres).subscribe(value => {
+        this.movieList = value;
+        this.results = this.movieList.results;
+        this.page = this.movieList.page;
+      });
+    });
   }
 
 

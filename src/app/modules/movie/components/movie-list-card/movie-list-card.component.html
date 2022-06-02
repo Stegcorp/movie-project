@@ -1,3 +1,9 @@
-<div>{{listCard.id}} {{listCard.title}}</div>
 
+<div class="postStar">
 
+  <a routerLink="{{listCard?.id}}]" [state]="{data: listCard}" class="image" ><img src="{{poster+listCard?.poster_path}}" width="160px" height="250px"></a>
+<div class="beetwin">
+ <a routerLink="{{listCard?.id}}]" [state]="{data: listCard}" class="ashka"> <b>{{listCard?.title}}</b></a>
+ <p class="right">{{date}}</p> {{actio}}
+</div>
+</div>

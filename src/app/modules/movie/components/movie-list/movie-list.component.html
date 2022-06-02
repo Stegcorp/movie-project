@@ -1,2 +1,22 @@
-<app-movie-list-card *ngFor="let m of movieList['results']" [listCard]="m" ></app-movie-list-card>
+<div class="wrap">
+  <app-movie-list-card  *ngFor="let m of results" [listCard]="m"></app-movie-list-card>
+
+</div>
 <router-outlet></router-outlet>
+
+
+<div class="pagination">
+
+  <a class="double-border-button" [routerLink]="['']" [queryParams]="{ page: page - 1}  "queryParamsHandling="merge">
+    <<
+  </a>
+
+  <a class="double-border-button">- {{page}} -</a>
+
+  <a class="double-border-button" [routerLink]="['']" [queryParams]="{ page: page + 1}"queryParamsHandling="merge">
+   >>
+  </a>
+
+</div>
+  <hr>
+<app-bottom></app-bottom>

@@ -1,0 +1,21 @@
+.inHead {
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.par{
+  font-size: 20px;
+  color: white;
+  margin-right: 10px;
+
+}
+a{
+  text-decoration: none;
+   color: black;
+}
+.name{
+  font-size: 50px;
+  margin-left: 10px;
+}

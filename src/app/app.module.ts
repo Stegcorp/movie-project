@@ -2,12 +2,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
+
 import {HeaderComponent} from './components/header/header.component';
 import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
 import {AppRoutingModule} from './app-routing.module';
-import {MainInterceptor} from './main.interceptor';
 import {HttpModule} from './http.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSliderModule} from '@angular/material/slider';
+import {MovieModule} from './modules/movie/movie.module';
 
 @NgModule({
   declarations: [
@@ -15,11 +17,14 @@ import {HttpModule} from './http.module';
     HeaderComponent,
     MainLayoutComponent
   ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        HttpModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MovieModule
+    ],
   providers: [
   ],
   bootstrap: [AppComponent]
