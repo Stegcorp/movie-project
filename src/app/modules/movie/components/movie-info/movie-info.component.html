@@ -1,1 +1,55 @@
-<p *ngIf="filmInfo">{{filmInfo.id}}</p>
+<div *ngIf="filmInfo">
+  <div class="title"><b>{{filmInfo.title}}</b></div>
+  <div class="atPoster">
+    <div class="left">
+      <div class="poster">
+        <img src="{{poster + filmInfo.poster_path}}" width="300px" height="450px" alt="{{filmInfo.title}}">
+      </div>
+    </div>
+    <div class="right">
+      <div class="inRight">
+        <div class="rightPanel"><b>Rating :</b>
+          <p>{{filmInfo.vote_average}}</p></div>
+        <div class="rightPanel"><b>Release date :</b>
+          <p>{{filmInfo.release_date}}</p></div>
+        <div class="rightPanel"><b>Country :</b>
+          <div><p *ngFor="let cou of filmInfo.production_countries">{{cou.name}}<br></p></div>
+        </div>
+        <div class="rightPanel"><b>Kino company :</b>
+          <div><p class="marg" *ngFor="let com of filmInfo.production_companies">{{com.name}}<br></p></div>
+        </div>
+        <div class="rightPanel"><b>Budget :</b>
+          <p>{{filmInfo.budget}}</p></div>
+        <div class="rightPanel">
+          <b>Genres :</b>
+          <div>
+            <a *ngFor="let g of filmInfo.genres" [routerLink]="['movie']" [queryParams]="{ with_genres: g.id}"
+               queryParamsHandling="merge">{{g.name}}<br></a>
+          </div>
+        </div>
+        <div class="rightPanel"><b>Popularity :</b>
+          <p>{{filmInfo.popularity}}</p></div>
+        <div class="rightPanel"><b>Time :</b>
+          <p>{{filmInfo.runtime}}</p></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="underFoto">
+      <p class="what">What the movie is about "{{filmInfo.title}}" :</p>
+      <p class="overview">{{filmInfo.overview}}</p>
+    </div>
+  </div>
+  <div class="onVideo">
+    <div class="video">
+      <div class="bottom">
+        <div class="d6"></div>
+      </div>
+      <div class="boton">
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>{{filmInfo.vote_average}}</p>
+  </div>
+</div>

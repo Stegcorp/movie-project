@@ -1,4 +1,27 @@
 .popular{
-  background: chocolate;
-  height: 70px;
+  background: snow;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
 }
+.panelPopular{
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  align-items: center;
+  margin-left: 60px;
+}
+a{
+  text-decoration: underline;
+  font-size: 18px;
+}
+.hover :hover{
+  background: #0e0000;
+  color: snow;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*.hover{*/
+/*  height: 40px;*/
+/*  width: 100px;*/
+/*}*/

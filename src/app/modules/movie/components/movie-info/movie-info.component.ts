@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {IMovie} from '../../interfaces/movie.interface';
 import {MovieService} from '../../services/movie.service';
+import {IMoviOne} from '../../interfaces/one movie/onemovie.interface';
 
 @Component({
   selector: 'app-movie-info',
@@ -10,19 +11,15 @@ import {MovieService} from '../../services/movie.service';
 })
 export class MovieInfoComponent implements OnInit {
 
-  filmInfo: IMovie;
+  filmInfo: IMoviOne;
+  poster = 'https://image.tmdb.org/t/p/w500/';
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) {
   }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id}) => {
-     if (id) {
-       const {state: {data}} = history;
-       this.filmInfo = data;
-      }else {
        this.movieService.getInfo(id).subscribe(value => this.filmInfo = value);
-     }
     });
   }
 

@@ -4,8 +4,7 @@ import {IMovie} from '../../interfaces/movie.interface';
 import {MovieService} from '../../services/movie.service';
 import {ActivatedRoute} from '@angular/router';
 import {IObj} from '../../interfaces/obj.interface';
-import {MatButtonModule} from '@angular/material/button';
-import {DataService} from '../../services/data.service';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -18,7 +17,7 @@ export class MovieListComponent implements OnInit {
   results: IMovie[];
   page: number;
 
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute, private dataService: DataService) {
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {

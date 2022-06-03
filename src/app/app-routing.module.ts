@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '', component: MainLayoutComponent, children: [
       {path: '', redirectTo: 'movie', pathMatch: 'full'},
       {path: 'movie', loadChildren: () => import('./modules/movie/movie.module').then(value => value.MovieModule)},
-      {path: 'movie/:id', component: MovieInfoComponent}
+      {path: 'movie/:id', component: MovieInfoComponent},
     ]
   },
 ];

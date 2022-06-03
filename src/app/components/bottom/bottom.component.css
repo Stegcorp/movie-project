@@ -9,10 +9,13 @@
   margin-top: 20px;
 }
 .text{
-  padding-top: 40px;
+  padding-top: 20px;
   color: gainsboro;
   width: 90%;
   margin-left: 10px;
+  display: flex;
+  column-gap: 40px;
+  padding-bottom: 20px;
 }
 a{
   text-decoration: none;
@@ -47,4 +50,10 @@ a #button :hover{
 span:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+.watch{
+  margin-left: 100px;
+  color: snow;
+  font-size: 18px;
+  padding-top: 30px;
 }

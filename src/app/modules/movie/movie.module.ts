@@ -36,7 +36,8 @@ import {MatButtonModule} from '@angular/material/button';
     exports: [
         GenresComponent,
         MovieListComponent,
-        BottomComponent
+        BottomComponent,
+        MovieListCardComponent
     ],
     providers: [
         MovieService,
