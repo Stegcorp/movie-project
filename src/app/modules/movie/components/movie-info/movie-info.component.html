@@ -68,9 +68,9 @@
       </div>
     </form>
     <div>
-      <div class="coma">
-        <div class="people"><b>{{formGod?.people}}</b></div>
-        <div>{{formGod?.find}}</div>
+      <div *ngFor="let p of useForm" class="coma">
+        <div class="people" ><b>{{p?.people}}</b></div>
+        <div>{{p?.find}}</div>
       </div>
     </div>
   </div>

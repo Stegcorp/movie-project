@@ -3,7 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 
 import {MovieService} from '../../services/movie.service';
 import {IMoviOne} from '../../interfaces/one movie/onemovie.interface';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {IForm} from '../../interfaces/form-interface';
 
 
@@ -32,21 +32,21 @@ export class MovieInfoComponent implements OnInit {
       this.movieService.getInfo(id).subscribe(value => {
         this.filmInfo = value;
         this.selectedValue = this.filmInfo.vote_average;
+        this.useForm = [];
       });
     });
   }
 
   _createForm(): void {
     this.form = new FormGroup({
-      find: new FormControl('Write a review'),
-      people: new FormControl('name')
+      find: new FormControl('Write a review', [Validators.minLength(2)]),
+      people: new FormControl('name', [Validators.minLength(2)])
     });
   }
 
   comment(): void {
     this.formGod = this.form.getRawValue();
-    // this.useForm.push(this.formGod);
-    console.log(this.useForm);
+    this.useForm.push(this.formGod);
   }
 
   countStar(star: number): void {
