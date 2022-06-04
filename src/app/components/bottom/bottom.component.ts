@@ -14,8 +14,8 @@ export class BottomComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
-  toTop() {
+
+  toTop(): void {
     this.viewportScroller.scrollToPosition([0, 0]);
   }
 }

@@ -12,6 +12,7 @@ import { GenresComponent } from './components/genres/genres.component';
 import {BottomComponent} from '../../components/bottom/bottom.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
+import { TopTenComponent } from './components/top-ten/top-ten.component';
 
 
 
@@ -23,7 +24,8 @@ import {MatButtonModule} from '@angular/material/button';
             MovieListCardComponent,
             MovieInfoComponent,
             GenresComponent,
-            BottomComponent
+            BottomComponent,
+            TopTenComponent
         ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import {MatButtonModule} from '@angular/material/button';
         GenresComponent,
         MovieListComponent,
         BottomComponent,
-        MovieListCardComponent
+        MovieListCardComponent,
+        TopTenComponent
     ],
     providers: [
         MovieService,

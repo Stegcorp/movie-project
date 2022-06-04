@@ -15,6 +15,7 @@ export class PopularComponent implements OnInit {
   results: IMovie[];
   page: number;
 
+
   constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
   }
 

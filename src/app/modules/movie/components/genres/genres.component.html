@@ -1,8 +1,4 @@
 
-
-<!--  <a routerLink="{{genre.id}}"></a>-->
-
-<!--   with_genres={{genre.id}}-->
   <a [routerLink]="['movie']" [queryParams]="{ with_genres: genre.id}" queryParamsHandling="merge">
     {{genre.name}}
   </a><br>
