@@ -11,11 +11,9 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class FindComponent implements OnInit {
 
   form: FormGroup;
-  valueFind: string;
-  search: [];
 
-  constructor(private movieService: MovieService, private router: Router,
-              private route: ActivatedRoute) {
+
+  constructor(private movieService: MovieService, private router: Router) {
     this._createForm();
   }
 
@@ -30,9 +28,7 @@ export class FindComponent implements OnInit {
   }
 
   onEnter(): void {
-    this.movieService.getSearch(this.form.value.find).subscribe(({results}) => {
-      console.log(results);
-      this.form.reset();
-    });
+    this.router.navigate(['movie/search/keyword'], {queryParams: {query: this.form.value.find}});
+    this.form.reset();
   }
 }

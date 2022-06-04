@@ -32,16 +32,16 @@ export class MovieService {
     return this.httpClient.get<IObj>(urls.topTen);
   }
 
-  getPopular(page: number = 1, gen?: number): Observable<IObj> {
-    return this.httpClient.get<IObj>(`${urls.popular}?page=${page}&with_genres=${gen}`);
+  getPopular(): Observable<IObj> {
+    return this.httpClient.get<IObj>(`${urls.popular}`);
   }
 
-  getNowPlaying(page: number = 1, gen?: number): Observable<IObj> {
-    return this.httpClient.get<IObj>(`${urls.now_playing}?page=${page}&with_genres=${gen}`);
+  getNowPlaying(): Observable<IObj> {
+    return this.httpClient.get<IObj>(`${urls.now_playing}`);
   }
 
-  getLatest(page: number = 1, gen?: number): Observable<IObj> {
-    return this.httpClient.get<IObj>(`${urls.latest}?page=${page}&with_genres=${gen}`);
+  getLatest(): Observable<IObj> {
+    return this.httpClient.get<IObj>(`${urls.latest}`);
   }
   getSearch(find: string, page: number = 1): Observable<IObj>{
     return this.httpClient.get<IObj>(`${urls.search}?query=${find}&&page=${page}`);

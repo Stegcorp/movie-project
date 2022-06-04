@@ -8,7 +8,7 @@ export const urls = {
   movies: `${API}/discover/movie`,
   movie: `${API}/movie`,
   genres: `${API}/genre/movie/list`,
-  now_playing: `${API}/movie/nov_playing`,
+  now_playing: `${API}/movie/now_playing`,
   popular: `${API}/movie/popular`,
   latest: `${API}/movie/latest`,
   topTen: `${API}/movie/top_rated`,

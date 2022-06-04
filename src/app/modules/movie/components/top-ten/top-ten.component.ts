@@ -16,9 +16,10 @@ export class TopTenComponent implements OnInit {
   }
 
   top: IMovie[];
+  poster = 'https://image.tmdb.org/t/p/w500/';
 
   ngOnInit(): void {
-    this.movieService.topRaiting().subscribe(({results}) => this.top = results);
+    this.movieService.topRaiting().subscribe(({results}) => this.top = results.filter((_, i) => i < 10));
   }
 
 

@@ -1,6 +1,11 @@
-<p><b>Raiting - Top 20</b></p>
+<p class="text-ten"><b>Raiting - Top 10</b></p>
 <div *ngFor="let t of top" class="bottom">
-  <a routerLink="movie/{{t.id}}" id="button" (click)="toTop()">{{t.title }}</a>
-  <div > Raiting : {{t.vote_average}}</div>
+  <div>
+    <a  routerLink="movie/{{t.id}}"  (click)="toTop()"><img src="{{poster + t.poster_path}}" width="50px" alt="{{t.title}}"></a>
+  </div>
+  <div>
+    <a routerLink="movie/{{t.id}}" id="button" (click)="toTop()"><span>{{t.title }}</span></a>
+    <div > Raiting : {{t.vote_average}}</div>
+  </div>
 </div>
 

@@ -1,27 +1,44 @@
+
+
 .popular{
-  background: snow;
-  height: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-.panelPopular{
+
   display: flex;
   justify-content: space-around;
-  width: 500px;
+}
+img {
+  width: 150px;
+  min-width: 100px;
+}
+span{
+  font-size: 30px;
+  padding-left: 90px ;
+  margin-bottom: 10px;
+}
+
+.scale {
+  transition: 0.5s;
+}
+.scale:hover {
+  transform: scale(1.1);
+}
+.holder{
+  position:relative;
+  width: 160px;
+  height: 235px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 60px;
+  border: 1px solid #D0D4DC;
 }
-a{
-  text-decoration: underline;
-  font-size: 18px;
+.block{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(255,255,255, 0.7);
+  padding:20px;
+  display:none;
 }
-.hover :hover{
-  background: #0e0000;
-  color: snow;
-  text-decoration: none;
-  cursor: pointer;
+.holder:hover .block{
+  display:block;
 }
-/*.hover{*/
-/*  height: 40px;*/
-/*  width: 100px;*/
-/*}*/

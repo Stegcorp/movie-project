@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IObj} from '../../modules/movie/interfaces/obj.interface';
 import {IMovie} from '../../modules/movie/interfaces/movie.interface';
 import {MovieService} from '../../modules/movie/services/movie.service';
@@ -11,22 +11,17 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class PopularComponent implements OnInit {
 
-  movieList: IObj;
+
   results: IMovie[];
-  page: number;
+  poster = 'https://image.tmdb.org/t/p/w500/';
 
-
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
+  constructor(private movieService: MovieService) {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(({page, with_genres}) => {
-      this.movieService.getPopular(page, with_genres).subscribe(value => {
-        this.movieList = value;
-        this.results = this.movieList.results;
-        this.page = this.movieList.page;
-      });
-    });
+    this.movieService.getNowPlaying().subscribe(({results}) =>
+      this.results = results.filter((_, i) => i < 6));
   }
+
 
 }

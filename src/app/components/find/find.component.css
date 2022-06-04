@@ -1,0 +1,15 @@
+.inPuti{
+  background: snow;
+  color: black;
+  width: 80% ;
+
+}
+.finder {
+  width: 300px;
+}
+.line{
+  color: #0e0000;
+  width: 100%;
+  border-bottom:3px solid #0e0000;
+  /*padding-top: 20px;*/
+}

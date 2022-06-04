@@ -1,4 +1,7 @@
+<span><b>New movies</b></span>
 <div class="popular">
-
-  <div class="find"> search</div>
+  <div class="holder" *ngFor="let s of results" >
+    <a routerLink="movie/{{s?.id}}"> <img  class="scale" src="{{poster + s.poster_path}}" alt="{{s.title}}"> </a>
+  <div class='block'><b>{{s.title}}</b></div>
+  </div>
 </div>

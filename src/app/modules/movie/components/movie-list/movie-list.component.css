@@ -11,6 +11,8 @@
 .pagination{
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }
 a{
   font-size: 16px;

@@ -3,14 +3,16 @@
   flex-direction: column;
   align-items: center;
   background: cadetblue;
+  padding-top: 200px;
+  background-image: url("https://img.besthqwallpapers.com/Uploads/21-5-2020/134003/3d-black-texture-geometric-black-texture-black-abstraction-background-3d-abstraction-black-texture-creative-black-background.jpg");
 }
 .header {
   justify-content: space-between;
   display: flex;
-  height: 80px;
+  height: 60px;
   align-items: center;
   width: 85%;
-  background: gray;
+  background: #0e0000;
   margin-top: 5px;
   min-width: 722px;
 }
@@ -20,14 +22,22 @@
   width: 85%;
   background: snow;
   min-width: 722px;
+  padding-top: 20px;
 }
 .find{
   width: 85%;
   min-width: 722px;
+  background: snow;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 40px;
 }
 .popular{
+  padding-top: 20px;
   width: 85%;
   min-width: 722px;
+  background: snow;
+
 }
 .width{
   width: 80%;

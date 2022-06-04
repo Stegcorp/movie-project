@@ -13,6 +13,7 @@ import {BottomComponent} from '../../components/bottom/bottom.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { TopTenComponent } from './components/top-ten/top-ten.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -27,14 +28,15 @@ import { TopTenComponent } from './components/top-ten/top-ten.component';
             BottomComponent,
             TopTenComponent
         ],
-  imports: [
-    CommonModule,
-    MovieRoutingModule,
-    HttpModule,
-    MatPaginatorModule,
-    MatDividerModule,
-    MatButtonModule
-  ],
+    imports: [
+        CommonModule,
+        MovieRoutingModule,
+        HttpModule,
+        MatPaginatorModule,
+        MatDividerModule,
+        MatButtonModule,
+        ReactiveFormsModule
+    ],
     exports: [
         GenresComponent,
         MovieListComponent,

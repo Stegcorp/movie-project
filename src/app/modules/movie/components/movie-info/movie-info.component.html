@@ -49,7 +49,29 @@
       </div>
     </div>
   </div>
-  <div>
-    <p>{{filmInfo.vote_average}}</p>
+  <div class="raiting">
+    <div style="margin-left: 30px"><span><b>Raiting :   </b> </span><span>{{filmInfo.vote_average}}</span></div>
+    <div>
+      <ul class="list-inline rating-list" style="padding-left: 0" *ngFor="let star of stars; let i= index">
+        <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}" (mouseover)="addClass(star)"
+            (mouseout)="removeClass()"> <span class="material-icons">star</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form">
+    <p class="formChapter"><b>Your review of the online movie and soundtrack:</b></p>
+    <form class="formich" [formGroup]="form" >
+      <div><label><b></b><input class="input" type="search" formControlName="find" ></label></div>
+      <div class="bttom"><div><label><b>name: </b><input class="inputTwo" type="search" formControlName="people"></label></div>
+      <div><b><a class="bot1" (click)="comment()" >Enter</a></b></div>
+      </div>
+    </form>
+    <div>
+      <div class="coma">
+        <div class="people"><b>{{formGod?.people}}</b></div>
+        <div>{{formGod?.find}}</div>
+      </div>
+    </div>
   </div>
 </div>
