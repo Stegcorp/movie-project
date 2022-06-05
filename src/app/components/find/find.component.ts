@@ -29,7 +29,9 @@ export class FindComponent implements OnInit {
   }
 
   onEnter(): void {
-    this.router.navigate(['/search/movie'], {queryParams: {query: this.form.value.find}});
+    if (this.form.value.find) {
+      this.router.navigate(['/search/movie'], {queryParams: {query: this.form.value.find}});
+    }
     this.form.reset();
   }
 

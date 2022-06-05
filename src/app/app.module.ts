@@ -13,7 +13,7 @@ import {MovieModule} from './modules/movie/movie.module';
 import {PopularComponent} from './components/popular/popular.component';
 import {FindComponent} from './components/find/find.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import {ShowFindComponent} from './components/show-find/show-find.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +22,6 @@ import {ShowFindComponent} from './components/show-find/show-find.component';
     MainLayoutComponent,
     PopularComponent,
     FindComponent,
-    ShowFindComponent
   ],
   imports: [
     BrowserModule,

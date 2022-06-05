@@ -1,0 +1,22 @@
+<div class="wrap">
+  <div class="postStar" *ngFor="let listCard of search">
+
+    <a routerLink="/movie/{{listCard?.id}}" class="image"><img src="{{poster+listCard?.poster_path}}" alt="post"
+                                                        width="160px" height="250px"></a>
+    <div class="beetwin">
+      <a routerLink="{{listCard?.id}}"  class="ashka"> <b>{{listCard?.title}}</b></a>
+      <p class="right">{{date}}</p>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+
+  <a class="double-border-button" (click)="pageMinus()" >
+    <<
+  </a>
+  <a class="double-border-button">- {{movieList?.page}} -</a>
+  <a class="double-border-button" [routerLink]="['/search/movie/']" [queryParams]="{ page: movieList?.page + 1}" queryParamsHandling="merge">
+    >>
+  </a>
+
+</div>

@@ -14,6 +14,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { TopTenComponent } from './components/top-ten/top-ten.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 
 
 
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from '@angular/forms';
             MovieInfoComponent,
             GenresComponent,
             BottomComponent,
-            TopTenComponent
+            TopTenComponent,
+            MovieSearchComponent
         ],
     imports: [
         CommonModule,
