@@ -12,5 +12,6 @@ export const urls = {
   popular: `${API}/movie/popular`,
   latest: `${API}/movie/latest`,
   topTen: `${API}/movie/top_rated`,
-  search: `${API}/search/keyword`
+  search: `${API}/search/keyword`,
+  searchNew: `${API}/search/movie`
 };

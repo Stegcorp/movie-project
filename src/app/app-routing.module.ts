@@ -11,7 +11,7 @@ const routes: Routes = [
       {path: '', redirectTo: 'movie', pathMatch: 'full'},
       {path: 'movie', loadChildren: () => import('./modules/movie/movie.module').then(value => value.MovieModule)},
       {path: 'movie/:id', component: MovieInfoComponent},
-      {path: 'movie/search/keyword', component: ShowFindComponent}
+      {path: 'search/movie', component: ShowFindComponent}
     ]
   },
 ];

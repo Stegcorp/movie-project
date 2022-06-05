@@ -43,8 +43,13 @@ export class MovieService {
   getLatest(): Observable<IObj> {
     return this.httpClient.get<IObj>(`${urls.latest}`);
   }
-  getSearch(find: string, page: number = 1): Observable<IObj>{
+
+  getSearch(find: string, page: number = 1): Observable<IObj> {
     return this.httpClient.get<IObj>(`${urls.search}?query=${find}&&page=${page}`);
+  }
+
+  getSearchNew(find: string, page: number = 1): Observable<IObj> {
+    return this.httpClient.get<IObj>(`${urls.searchNew}?query=${find}&&page=${page}`);
   }
 
 }

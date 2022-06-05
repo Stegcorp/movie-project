@@ -6,7 +6,7 @@ import {IGenre} from '../interfaces/genres.interface';
   providedIn: 'root'
 })
 export class DataService {
-  storage = new BehaviorSubject<IGenre[]>([{id: 0, name: ''}]);
+  storage = new BehaviorSubject<any>(null);
 
   constructor() {
   }
