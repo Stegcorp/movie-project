@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  toggleDarkTheme(): void {
+    const a = document.getElementsByClassName('header')[0];
+    const b = document.getElementsByClassName('popular')[0];
+    const f = document.getElementsByClassName('find')[0];
+    const r = document.getElementsByClassName('rightPanel')[0];
+    const p = document.getElementsByClassName('ashka')[0];
+    a.classList.toggle('dark-theme');
+    b.classList.toggle('dark-theme');
+    f.classList.toggle('dark-theme');
+    r.classList.toggle('dark-theme');
+    p.classList.toggle('dark-theme');
+  }
 }

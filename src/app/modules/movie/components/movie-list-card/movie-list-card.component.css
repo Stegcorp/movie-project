@@ -15,6 +15,7 @@
   align-items: center;
 }
 
+
 .beetwin {
   display: flex;
   justify-content: space-around;
@@ -32,7 +33,10 @@ p {
   display: flex;
   justify-content: flex-end;
 }
-
+.dark-theme{
+  color: snow;
+  background: #0e0000;
+}
 .ashka {
   display: flex;
   justify-content: center;

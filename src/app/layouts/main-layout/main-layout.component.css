@@ -16,6 +16,12 @@
   margin-top: 5px;
   min-width: 722px;
 }
+
+.dark-theme {
+  color: #ffffff;
+  background: #0e3934;
+}
+
 .rightPanel {
  display: flex;
   justify-content: space-around;
@@ -37,7 +43,10 @@
   width: 85%;
   min-width: 722px;
   background: snow;
-
+}
+.dark-theme{
+  color: snow;
+  background: #0e0000;
 }
 .width{
   width: 80%;
