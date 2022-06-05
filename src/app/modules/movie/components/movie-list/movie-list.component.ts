@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 
 import {IMovie} from '../../interfaces/movie.interface';
 import {MovieService} from '../../services/movie.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {IObj} from '../../interfaces/obj.interface';
 
 
@@ -17,7 +17,7 @@ export class MovieListComponent implements OnInit {
   results: IMovie[];
   page: number;
 
-  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -31,4 +31,9 @@ export class MovieListComponent implements OnInit {
   }
 
 
+  pageMinus(): void {
+    if (this.movieList.page > 1) {
+      this.router.navigate([''], {queryParams: {page: this.movieList.page - 1}, queryParamsHandling: 'merge'});
+    }
+  }
 }

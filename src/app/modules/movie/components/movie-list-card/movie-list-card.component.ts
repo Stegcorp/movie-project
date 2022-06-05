@@ -3,6 +3,8 @@ import {IMovie} from '../../interfaces/movie.interface';
 
 import {IGenre} from '../../interfaces/genres.interface';
 import {MovieService} from '../../services/movie.service';
+import {DataService} from '../../services/data.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-movie-list-card',
@@ -19,13 +21,19 @@ export class MovieListCardComponent implements OnInit {
   genre: [];
 
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
     this.date = this.listCard.release_date.slice(0, 4);
     this.genre = this.listCard.genre_ids;
-    // @ts-ignore
-    this.movieService.getGenres().subscribe(({genres}) => this.genres = genres);
+    this.activatedRoute.queryParams.subscribe(({query}) => {
+      if (query){
+      this.movieService.getSearchNew(query).subscribe(({results}) => this.genres = results);
+      }else {
+        // @ts-ignore
+        this.movieService.getGenres().subscribe(({genres}) => this.genres = genres);
+      }
+    });
   }
 }

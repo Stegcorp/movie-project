@@ -10,7 +10,7 @@ import {IMovie} from '../../modules/movie/interfaces/movie.interface';
   styleUrls: ['./show-find.component.css']
 })
 export class ShowFindComponent implements OnInit {
-  @Input()
+
   show: IMovie[];
 
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService) {
@@ -20,7 +20,6 @@ export class ShowFindComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe(({query}) => {
       this.movieService.getSearchNew(query).subscribe(({results}) => {
         this.show = results;
-        console.log(this.show);
       });
     });
   }
