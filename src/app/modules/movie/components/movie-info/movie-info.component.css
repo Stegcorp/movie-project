@@ -46,6 +46,9 @@
 .inRight b {
   width: 150px;
 }
+.dark-theme{
+  color: white  !important;
+}
 
 a {
   text-decoration: underline;
@@ -57,7 +60,7 @@ a {
 }
 
 .underFoto {
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .what {

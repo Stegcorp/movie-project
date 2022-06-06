@@ -18,11 +18,13 @@ export class HeaderComponent implements OnInit {
     const b = document.getElementsByClassName('popular')[0];
     const f = document.getElementsByClassName('find')[0];
     const r = document.getElementsByClassName('rightPanel')[0];
-    const p = document.getElementsByClassName('ashka')[0];
+    const dar = document.getElementsByClassName('inRight')[0];
     a.classList.toggle('dark-theme');
     b.classList.toggle('dark-theme');
     f.classList.toggle('dark-theme');
     r.classList.toggle('dark-theme');
-    p.classList.toggle('dark-theme');
+    dar.classList.toggle('dark-theme');
+    // pag.classList.toggle('dark-theme');
+
   }
 }
