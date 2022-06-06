@@ -37,7 +37,7 @@ p {
   display: flex;
   justify-content: center;
   margin: 0 5px 0 5px;
-  color: black;
+  color: darkred;
   font-size: 14px;
 }
 a {
@@ -78,8 +78,8 @@ a:hover{
   margin: 10px 20px;
   padding: 10px 30px;
   position: relative;
-  border: 2px solid #0e0000;
-  color: black;
+  border: 2px solid darkred ;
+  color: darkred;
   font-family: 'Montserrat', sans-serif;
   transition: .4s;
 }
@@ -97,7 +97,7 @@ a:hover{
   transition: .4s;
 }
 .double-border-button:hover:after {
-  border-color: #0e0000;
+  border-color: darkred;
   width: calc(100% - 10px);
   height: calc(100% + 10px);
 }
