@@ -22,9 +22,9 @@
           <p>{{filmInfo.budget}}</p></div>
         <div class="rightPanel">
           <b>Genres :</b>
-          <div class="star">
+          <div >
             <a *ngFor="let g of filmInfo.genres" [routerLink]="['/movie']" [queryParams]="{ with_genres: g.id}"
-               queryParamsHandling="merge">{{g.name}}<br></a>
+               queryParamsHandling="merge"><span class="span">{{g.name}}</span><br></a>
           </div>
         </div>
         <div class="rightPanel"><b>Popularity :</b>

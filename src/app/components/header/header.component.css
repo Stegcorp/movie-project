@@ -10,7 +10,7 @@
   margin-right: 10px;
  }
 .dark-theme{
-  color: gold;
+  color: snow;
 }
 a{
   text-decoration: none;
@@ -43,7 +43,7 @@ label {
   text-indent: -9999px;
   width: 80px;
   height: 45px;
-  background: #ffffff;
+  background: #B3B3B3;
   display: block;
   border-radius: 80px;
   position: relative;
@@ -56,7 +56,7 @@ label:after {
   left: 5px;
   width: 35px;
   height: 35px;
-  background: #bada55;
+  background: gray;
   border-radius: 40px;
   transition: 0.3s;
 }

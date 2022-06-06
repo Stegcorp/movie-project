@@ -38,6 +38,7 @@ p {
   color: snow;
   background: #0e0000;
 }
+
 .ashka {
   display: flex;
   justify-content: center;
@@ -45,15 +46,17 @@ p {
   font-size: 14px;
 
 }
-.dark{
-  color: black;
-}
-
-a {
-  text-decoration: none;
-}
 
 a:hover {
   text-decoration: underline;
+  color: darkred;
+  font-size: 15px;
 }
+a{
+  text-decoration: none;
 
+}
+.dark{
+  color: darkred;
+  text-decoration: none;
+}
