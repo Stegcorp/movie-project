@@ -1,5 +1,5 @@
 import {environment} from '../../environments/environment';
-import {query} from '@angular/animations';
+
 
 
 const {API} = environment;

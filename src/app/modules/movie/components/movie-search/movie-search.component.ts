@@ -17,7 +17,7 @@ export class MovieSearchComponent implements OnInit {
   date: string;
   movieList: IObj;
 
-  constructor(private activatedRoute: ActivatedRoute,  private viewportScroller: ViewportScroller, private movieService: MovieService, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private viewportScroller: ViewportScroller, private movieService: MovieService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -34,6 +34,7 @@ export class MovieSearchComponent implements OnInit {
       this.router.navigate(['/search/movie/'], {queryParams: {page: this.movieList.page - 1}, queryParamsHandling: 'merge'});
     }
   }
+
   toTop(): void {
     this.viewportScroller.scrollToPosition([0, 600]);
   }
