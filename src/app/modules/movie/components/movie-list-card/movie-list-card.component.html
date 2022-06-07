@@ -1,9 +1,9 @@
 <div class="postStar">
 
-  <a routerLink="{{listCard?.id}}" class="image"><img src="{{poster+listCard?.poster_path}}" alt="post"
+  <a routerLink="{{listCard?.id}}" (click)="toTop()" class="image"><img src="{{poster+listCard?.poster_path}}" alt="post"
                                                                                   width="160px" height="250px"></a>
   <div class="beetwin">
-    <div><a routerLink="{{listCard?.id}}" class="ashka"> <p><b class="dark">{{listCard?.title}}</b></p></a></div>
+    <div><a routerLink="{{listCard?.id}}" (click)="toTop()" class="ashka"> <p><b class="dark">{{listCard?.title}}</b></p></a></div>
     <p class="right">{{date}}</p>
   </div>
 </div>

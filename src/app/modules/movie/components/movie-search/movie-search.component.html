@@ -1,10 +1,10 @@
 <div class="wrap">
   <div class="postStar" *ngFor="let listCard of search">
 
-    <a routerLink="/movie/{{listCard?.id}}" class="image"><img src="{{poster+listCard?.poster_path}}" alt="post"
+    <a routerLink="/movie/{{listCard?.id}}" (click)="toTop()" class="image"><img src="{{poster+listCard?.poster_path}}" alt="post"
                                                         width="160px" height="250px"></a>
     <div class="beetwin">
-      <a routerLink="{{listCard?.id}}"  class="ashka"> <b>{{listCard?.title}}</b></a>
+      <a routerLink="{{listCard?.id}}" (click)="toTop()" class="ashka"> <b>{{listCard?.title}}</b></a>
       <p class="right">{{date}}</p>
     </div>
   </div>

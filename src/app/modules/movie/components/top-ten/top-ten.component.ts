@@ -24,7 +24,7 @@ export class TopTenComponent implements OnInit {
 
 
   toTop(): void {
-    this.viewportScroller.scrollToPosition([0, 0]);
+    this.viewportScroller.scrollToPosition([0, 600]);
   }
 
 }

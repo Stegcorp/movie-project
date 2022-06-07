@@ -3,6 +3,7 @@ import {IMovie} from '../../interfaces/movie.interface';
 
 import {IGenre} from '../../interfaces/genres.interface';
 import {MovieService} from '../../services/movie.service';
+import {ViewportScroller} from '@angular/common';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class MovieListCardComponent implements OnInit {
   genre: [];
 
 
-  constructor(private movieService: MovieService) {
+  constructor(private movieService: MovieService, private viewportScroller: ViewportScroller) {
   }
 
   ngOnInit(): void {
@@ -29,6 +30,8 @@ export class MovieListCardComponent implements OnInit {
     // @ts-ignore
     this.movieService.getGenres().subscribe(({genres}) => this.genres = genres);
   }
-
+  toTop(): void {
+    this.viewportScroller.scrollToPosition([0, 600]);
+  }
 
 }

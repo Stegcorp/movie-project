@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {MovieService} from '../../services/movie.service';
 import {IMovie} from '../../interfaces/movie.interface';
 import {IObj} from '../../interfaces/obj.interface';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-movie-search',
@@ -16,7 +17,7 @@ export class MovieSearchComponent implements OnInit {
   date: string;
   movieList: IObj;
 
-  constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute,  private viewportScroller: ViewportScroller, private movieService: MovieService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -32,6 +33,9 @@ export class MovieSearchComponent implements OnInit {
     if (this.movieList.page > 1) {
       this.router.navigate(['/search/movie/'], {queryParams: {page: this.movieList.page - 1}, queryParamsHandling: 'merge'});
     }
+  }
+  toTop(): void {
+    this.viewportScroller.scrollToPosition([0, 600]);
   }
 
 }

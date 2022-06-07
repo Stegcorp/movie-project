@@ -19,7 +19,7 @@ span{
   transition: 0.5s;
 }
 .scale:hover {
-  transform: scale(1.1);
+  transform: scale(1.0);
 }
 .holder{
   position:relative;
@@ -38,6 +38,7 @@ span{
   background:rgba(255,255,255, 0.7);
   padding:20px;
   display:none;
+  color: darkred;
 }
 .holder:hover .block{
   display:block;
