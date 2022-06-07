@@ -15,7 +15,6 @@ import {MatButtonModule} from '@angular/material/button';
 import {TopTenComponent} from './components/top-ten/top-ten.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MovieSearchComponent} from './components/movie-search/movie-search.component';
-import {MovieResolver} from './services/resolvers/movie.resolver';
 
 
 @NgModule({
@@ -47,7 +46,6 @@ import {MovieResolver} from './services/resolvers/movie.resolver';
   ],
   providers: [
     MovieService,
-    MovieResolver
   ]
 })
 export class MovieModule {
