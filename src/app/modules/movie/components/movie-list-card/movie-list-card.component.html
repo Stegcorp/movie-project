@@ -4,6 +4,12 @@
                                                                                   width="160px" height="250px"></a>
   <div class="beetwin">
     <div><a routerLink="{{listCard?.id}}" (click)="toTop()" class="ashka"> <p><b class="dark">{{listCard?.title}}</b></p></a></div>
-    <p class="right">{{date}}</p>
+      <div class="star">
+      <ul class="list-inline rating-list" style="padding-left: 0" *ngFor="let star of stars; let i= index">
+        <li [ngClass]="{'selected': (star <= selectedValue)}"><span style="font-size: 10px" class="material-icons">star</span>
+        </li>
+      </ul>
+      <p class="right">{{date}}</p>
+      </div>
   </div>
 </div>

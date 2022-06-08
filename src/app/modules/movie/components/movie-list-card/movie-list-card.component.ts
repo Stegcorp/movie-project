@@ -19,7 +19,9 @@ export class MovieListCardComponent implements OnInit {
   date: string;
   genres: IGenre[];
   genre: [];
-
+  stars: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  selectedValue: number;
+  isMouseover = true;
 
   constructor(private movieService: MovieService, private viewportScroller: ViewportScroller) {
   }
@@ -27,11 +29,11 @@ export class MovieListCardComponent implements OnInit {
   ngOnInit(): void {
     this.date = this.listCard.release_date.slice(0, 4);
     this.genre = this.listCard.genre_ids;
+    this.selectedValue = this.listCard.vote_average;
     // @ts-ignore
     this.movieService.getGenres().subscribe(({genres}) => this.genres = genres);
   }
   toTop(): void {
     this.viewportScroller.scrollToPosition([0, 600]);
   }
-
 }
